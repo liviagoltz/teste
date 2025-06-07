@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        body{
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            background-color: rgb(212, 165, 255);
+        }
+        section{
+            background-color: rgb(153, 25, 153);
+            padding: 50px;
+            border-radius: 60px;
+            color: white;
+        }
+        p{
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-size: 50px;
+            margin: 30px;
+        }
+        h1{
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-size: 40px;
+        }
+        button{
+            background-color: rgb(59, 7, 75);
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Contador</h1>
+        <p>0</p>
+        <button onclick="aumentar()">Mais</button>
+        <button onclick="zerar()">Zerar</button>
+        <button onclick="diminuir()">Menos</button>
+        <button onclick="dobrar()">Dobrar</button>
+        <button onclick="dividir()">Dividir</button>
+    </section>
+    <script>
+        let numero = 0
+        function aumentar(){
+            numero = numero +1
+            render()
+        }
+        function zerar(){
+            numero = numero - numero 
+            render()
+        }
+        function diminuir(){
+            numero = numero -1
+            render()
+        }
+        function dobrar(){
+            numero = numero + numero
+            render()
+        }
+        function dividir(){
+            numero = numero /=2;
+            render()
+        }
+        function render(){
+        const p = document.querySelector("p") 
+        p.innerText = numero 
+        }
+        render()
+    </script>
+</body>
+</html>
